@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: futura, "Noto Sans", Arial, Helvetica, "Sans serif";
+            margin: 0;
+            color: #292d39;
+        }
+
+        #banner {
+            background: linear-gradient(160deg, #292d39, #21526c);
+            width: 300px;
+            height: 70px;
+            display: inline-flex;
+        }
+
+        #logo42 {
+            margin: 20px;
+            width: 43px;
+            height: 30px;
+        }
+
+        .navLink,
+        .navLinkDark {
+            text-decoration: none;
+            font-size: medium;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .navLinkDark {
+            color: #292d39;
+        }
+
+        .navLink:after,
+        .navLinkDark:after {
+            content: '';
+            width: 0;
+            height: 2px;
+            display: block;
+            background: #ffffff;
+            transition: 0.3s;
+        }
+
+        .navLinkDark:after {
+            background: #292d39;
+        }
+
+        .navLink:hover:after,
+        .navLinkDark:hover:after {
+            width: 100%;
+        }
+
+        .linkBox {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 170px;
+            margin-right: 0;
+            margin-left: auto
+        }
+
+        .linkLine {
+            display: flex;
+            justify-content: space-around
+        }
+
+        .triangle-up {
+            width: 0;
+            height: 0;
+            margin-top: -13px;
+            margin-bottom: 10px;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-bottom: 10px solid #292d39;
+        }
+
+        /********************************/
+        /*         Progress Bar         */
+        /********************************/
+
+        .progressBar {
+            background-color: #eee;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+            border-radius: 3px;
+            padding: 2px;
+        }
+
+        .progressBar > div {
+            background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .15)),
+            -webkit-linear-gradient(340deg, #007399, #45abe2);
+            height: 20px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="banner">
+    <img id="logo42" alt="42"
+         src="pictures/42_logo-7dfc9110a5319a308863b96bda33cea995046d1731cebb735e41b16255106c12.svg">
+    <div class="linkBox">
+        <div class="linkLine">
+            <a class="navLink" id="goIntra" href="#">Intra</a>
+            <a class="navLink" id="goMatrix" href="#">Matrix</a>
+        </div>
+        <div class="linkLine">
+            <a class="navLink" id="goTuteur" href="#">Tuteur</a>
+            <a class="navLink" id="goLogTime" href="#">LogTime</a>
+        </div>
+    </div>
+</div>
+
+<div id="intraPlus" style="padding: 10px;" hidden>
+    <div id="myLogTime"></div>
+    <div class="linkLine">
+        <a class="navLinkDark" id="updateLogin" href="#" style="font-size: 15px">Update</a>
+    </div>
+</div>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="popup.js"></script>
+
+</html>
