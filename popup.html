@@ -71,9 +71,9 @@
             height: 0;
             margin-top: -13px;
             margin-bottom: 10px;
-            border-left: 7px solid transparent;
-            border-right: 7px solid transparent;
-            border-bottom: 10px solid #292d39;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-bottom: 7px solid #292d39;
         }
 
         /********************************/
@@ -81,18 +81,33 @@
         /********************************/
 
         .progressBar {
+            display: flex;
             background-color: #eee;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
             border-radius: 3px;
             padding: 2px;
         }
 
-        .progressBar > div {
-            background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .15)),
-            -webkit-linear-gradient(340deg, #007399, #45abe2);
+        .currentProgress, .lateProgress, .advanceProgress {
             height: 20px;
             border-radius: 2px;
         }
+
+        .currentProgress {
+            /*background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .15)), -webkit-linear-gradient(340deg, #007399, #45abe2);*/
+            background-color: #45ABE2;
+        }
+
+        .lateProgress {
+            /*background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .15)), -webkit-linear-gradient(340deg, #a3433d, #da5a51);*/
+            background-color: #da5a51;
+        }
+
+        .advanceProgress {
+            /*background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .15)), -webkit-linear-gradient(340deg, #1e8756, #2abb77);*/
+            background-color: #2abb77;
+        }
+
     </style>
 </head>
 <body>
