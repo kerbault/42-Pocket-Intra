@@ -293,9 +293,7 @@ const init = () => {
                             // Iteration on request Data
                             // for (const i in oCleanData) {
                             for (const i in data) {
-
                                 let logTimeDay = 0;
-
                                 currentDate = i.split('-');
                                 if (parseInt(currentDate[1]) == monthLimit) break;
 
